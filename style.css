@@ -1,0 +1,353 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+*{
+    box-sizing: border-box;
+}
+/*navbar style*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    border-bottom: 1px solid rgb(192, 184, 184);
+    position: relative;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.burger{
+    position: absolute;
+    left: 10px;
+    display: none;
+}
+
+.logo{
+    background-image: url(./assets/Symbols.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 182.84px;
+    height: 31.44px;
+    margin-left: 10px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.cart{
+    position: relative;
+}
+.menu img{
+    margin: 0px 10px;
+}
+
+.basket{
+    position: relative;
+    width: 22px;
+    height: 19px;
+    cursor: pointer;
+}
+.flag{
+    color: white;
+}
+
+.red-button{
+    width: 17px;
+    height: 17px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -15px;
+   right: 5px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #F1F1F5;
+    border-radius: 12px;
+    width: 120px;
+    height: 46px;
+}
+/*navbar style end*/
+/*Headers style*/
+
+header{
+    background: url(./assets/shutterstock_1040057017.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 170px;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1{
+    font-size: 36px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+/*list and filter*/
+main{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 10px;
+}
+.filter-container{
+    width: 25%;
+    border-radius: 10px;
+    padding: 10px;
+  background-color: white;
+}
+.categories-list{
+    margin-top: 5px;
+}
+.filter-categories{
+    font-size: 20px;
+}
+.domein-zone{
+    margin-top: 5px;
+}
+.filter-zone{
+    font-size: 20px;
+}
+.domein-list{
+    width: 70%;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+.domein-card{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-bottom: 0.1px solid rgb(87, 86, 86);
+}
+.left-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.price{
+    font-size: 25px;
+}
+.add-to_cart{
+    margin-left: 10px;
+    padding: 15px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.pages{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgb(192, 184, 184);
+}
+
+.menu-route{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-route li{
+    margin-left: 10px;
+    text-align: left;
+    font: normal normal medium 14px/40px TKT;
+    letter-spacing: 0px;
+    color: #696974;
+    opacity: 1;
+}
+
+.about-route{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.about-route li{
+    margin-right: 10px;
+    font-size: 17px;
+    color: gray;
+    cursor: pointer;
+}
+.about-route li:hover{
+    color: rgb(105, 103, 103);
+}
+.menu-route li:hover{
+    color: rgb(105, 103, 103);
+}
+
+
+.filter-container.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+}
+
+.selected-domein{
+    display: none;
+    padding: 15px 20px;
+    background-color: white;
+    position: absolute;
+    right: 10px;
+    border: 1px solid gray;
+}
+.selected-domein_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-top: 9px;
+}
+.selected-domein_right-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+.domein-name{
+    font-size: 20px;
+    color: black;
+    margin: 0;
+}
+.selected-price{
+    font-size: 20px;
+    color: black;
+    margin: 0; 
+}
+.remove-item{
+    padding: 5px 7px;
+    cursor: pointer;
+    background-color: rgb(236, 47, 47);
+    border-radius: 10px;
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+}
+.total-price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.total-price h4{
+ margin: 0;
+ font-size: 22px;
+}
+.buy{
+    padding: 7px 11px;
+    background-color: rgb(49, 49, 243);
+    color: white;
+    font-weight: 400;
+    border-radius: 10px;
+    cursor: pointer;
+}
+ .open{
+    display: block;
+}
+/*responsive*/
+@media(max-width:925px){
+    header{
+        height: 125px;
+    }
+    .menu-route li{
+        font-size: 15px;
+    }
+    .about-route li{
+        font-size: 15px;
+    }
+}
+@media(max-width:789px){
+    .pages{
+        display: none;
+    }
+    header h1{
+       font-size: 30px;
+    }
+}
+
+@media(max-width:669px){
+    header{
+        height: 100px;
+    }
+    header h1{
+        font-size: 25px;
+     }
+    .filter-container{
+     display: none;
+    }
+   
+    .burger{
+        display: block;
+    }
+    .domein-list{
+        width: 90%;
+    }
+    .flag{
+        display: none;
+    }
+    .user p{
+        display: none;
+    }
+    .user img:last-child{
+      display: none;
+    }
+    .user{
+        width: 50px;
+    }
+}
+@media(max-width:488px){
+    nav{
+        padding: 10px 30px;
+    }
+    header{
+        height: 53px;
+    }
+    .logo{
+        width: 150px;
+        height: 25px;
+    }
+    header h1{
+        font-size: 17px;
+     }
+    
+}
